@@ -8,6 +8,8 @@ namespace StacksAndQueues
         {
             Console.WriteLine("Welcome to Section 2: Stacks and Queues!");
             StackUsingLinkedList linkedListStack = new StackUsingLinkedList();
+            QueueUsingLinkedList linkedListQueue = new QueueUsingLinkedList();
+
             linkedListStack.Push(70);
             linkedListStack.Push(30);
             linkedListStack.Push(56);
@@ -17,6 +19,11 @@ namespace StacksAndQueues
             linkedListStack.Pop();
             linkedListStack.IsEmpty();
             linkedListStack.Display();
+
+            linkedListQueue.Enqueue(56);
+            linkedListQueue.Enqueue(30);
+            linkedListQueue.Enqueue(70);
+            linkedListQueue.Display();
         }
     }
 }
