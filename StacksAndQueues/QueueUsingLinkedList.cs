@@ -7,7 +7,10 @@ namespace StacksAndQueues
     class QueueUsingLinkedList
     {
         Node head = null;
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="data"></param>
         internal void Enqueue(int data)
         {
             Node node = new Node(data);
@@ -23,6 +26,19 @@ namespace StacksAndQueues
                 temp.next = node;
             }
             Console.WriteLine("{0} inserted into queue ", node.data);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        internal Node Dequeue()
+        {
+            if (this.head == null)
+                return null;
+            this.head = this.head.next;
+            return this.head;
+
         }
 
         internal void Display()
